@@ -98,7 +98,7 @@ html {
   position: absolute;
   width: 100%;
   padding: 25px;
-  max-height: inherit;
+  max-height: 625px;
 }
 
 #menu-link {
@@ -113,7 +113,7 @@ html {
 
 .scrollable-menu {
   height: auto;
-  max-height: 500px;
+  max-height: 600px;
   overflow-x: scroll;
 }
 
