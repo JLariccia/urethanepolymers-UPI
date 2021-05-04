@@ -123,23 +123,135 @@ html {
   margin-bottom: 10px;
 }
 
+/* CARD STYLING */
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+  overflow-y: scroll;
+  min-height: 255px;
+  max-height: 400px;
+}
+
+.card .card-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-image {
+  width: 100%;
+}
+
 img {
   border-radius: 5px;
 }
 
-#urethane-btn .btn {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #9c0404fe;
-  border-color: #9c0404fe;
-  color: #fff;
+.card-details {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
 
-#urethane-btn .btn:hover {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: transparent;
-  border-color: #9c0404fe;
-  color: #fff;
+.card:hover .card-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
 }
+
+.card-details h3 {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.card-details p {
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-bottom {
+  top: 80%;
+}
+
+/* CARD IMAGES */
+
+#card-pedestrian {
+  background: url(../img/cards/pedestrian-coatings.jpg);
+  background-size: cover;
+}
+
+#card-vehicular {
+  background: url(../img/cards/vehicular-coatings.jpg);
+  background-size: cover;
+}
+
+#card-roof-coatings {
+  background: url(../img/cards/roof-coatings.jpg);
+  background-size: cover;
+}
+
+#card-below-grade {
+  background: url(../img/cards/below-grade.jpg);
+  background-size: cover;
+}
+
+#card-epoxy-flooring {
+  background: url(../img/cards/epoxy-flooring.jpg);
+  background-size: cover;
+}
+
+#card-specialty {
+  background: url(../img/cards/specialty-coatings.jpg);
+  background-size: cover;
+}
+
+#card-wall-coatings {
+  background: url(../img/cards/wall-coatings.jpg);
+  background-size: cover;
+}
+
+#card-tech-resource {
+  background: url(../img/cards/technical-resource.jpg);
+  background-size: cover;
+}
+
+.fa-arrow-circle-up {
+  color: #1a428a;
+}
+
+.fa-arrow-circle-up:hover {
+  color: #9c0404fe;
+}
+
+/* CARD IMAGES END */
 
 #home .btn {
   font-family: Arial, Helvetica, sans-serif;
@@ -167,14 +279,6 @@ img {
   border-color: grey;
   background-color: grey;
   color: #fff;
-}
-
-.fa-arrow-circle-up {
-  color: #1a428a;
-}
-
-.fa-arrow-circle-up:hover {
-  color: #9c0404fe;
 }
 
 .carousel-inner img {
@@ -241,16 +345,6 @@ img {
 #pedestrian-coatings {
   background-image: url(../img/walk-way.jpg);
   background-position: bottom center;
-  background-repeat: no-repeat;
-  background-attachment: sticky;
-  background-size: cover;
-  min-height: 550px;
-  margin-bottom: 0px;
-}
-
-#urethane-systems-hero {
-  background-image: url(../img/appplication.jpg);
-  background-position: center;
   background-repeat: no-repeat;
   background-attachment: sticky;
   background-size: cover;
